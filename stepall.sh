@@ -1,6 +1,5 @@
 #!/bin/bash
 #PBS -q workq
-#PBS -A loni_efe_13
 #PBS -l nodes=1:ppn=20
 #PBS -l walltime=01:00:00
 #PBS -N stepall
