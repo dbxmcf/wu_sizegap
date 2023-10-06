@@ -16,4 +16,5 @@ export PATH=/usr/local/packages/python/2.7.12-anaconda-wu/wuportal/Classificatio
 export PATH=/usr/local/packages/python/2.7.12-anaconda-wu/wuportal/Motif_Discovery:$PATH
 
 /usr/bin/time searchKeys-11-5-18.py --sample_name t1 --path ./sample_root --search_mode 0 --use_common_keys
+/usr/bin/time searchKeys_A_not_other.py --sample_name t1 --path ./sample_root --search_mode 6 --b_percent 0
 
