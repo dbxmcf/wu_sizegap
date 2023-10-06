@@ -14,10 +14,12 @@ cd /work/$USER
 ```
 git clone https://github.com/dbxmcf/wu_sizegap.git
 ```
-4. Submit the job:
+4. Submit the first job:
 ```
 qsub stepall.sh
 ```
+5. Submit the second job after the first job is complete:
+```
+qsub common_step.sh
+```
 
-## Reference
-[Paper name](https://www.guru99.com/r-vs-python.html)
