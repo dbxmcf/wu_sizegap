@@ -2,9 +2,9 @@
 
 ## Instructions on how to run on the LONI cluster (New users can copy and paste each command to the terminal window and run them):
 
-1. Log onto QB2 cluster using the command:
+1. Log onto QB3 cluster using the command:
 ```
-ssh username@qb.loni.org
+ssh username@qbc.loni.org
 ```
 2. Change to the /work directory:
 ```
@@ -14,12 +14,16 @@ cd /work/$USER
 ```
 git clone https://github.com/dbxmcf/wu_sizegap.git
 ```
+4. Switch to the repository directory on the cluster:
+```
+cd wu_sizegap
+```
 4. Submit the first job:
 ```
-qsub stepall.sh
+sbatch stepall.sh
 ```
 5. Submit the second job after the first job is complete:
 ```
-qsub common_step.sh
+sbatch common_step.sh
 ```
 
