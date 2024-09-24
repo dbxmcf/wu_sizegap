@@ -18,11 +18,11 @@ git clone https://github.com/dbxmcf/wu_sizegap.git
 ```
 cd wu_sizegap
 ```
-4. Submit the first job:
+5. Submit the first job:
 ```
 sbatch stepall.sh
 ```
-5. Submit the second job after the first job is complete:
+6. Submit the second job after the first job is complete:
 ```
 sbatch common_step.sh
 ```
