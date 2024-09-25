@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -p single
-#SBATCH -A loni_tsr_6
+#SBATCH -A loni_loniadmin1
 #SBATCH -N 1
 #SBATCH -n 20
 #SBATCH -t 20:00:00
@@ -33,7 +33,6 @@ module purge
 SIGPAR="singularity exec -B /work /project/wxx6941/packages/hsp-project_latest.sif intel.mpi.impiomp.out"
 SECONDS=0
 srun -n 8 $SIGPAR -f $input_h5
-#srun -n 8 $SIGPAR -f ./sample_hsp70_actin/sample_hsp70_actin.h5
 #mpirun -np $NPROCS -f $PBS_NODEFILE -ppn 2 ./pgi.mpi.pomp.out -f $input_h5
 echo "took $SECONDS sec"
 
