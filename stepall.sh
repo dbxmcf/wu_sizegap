@@ -9,8 +9,7 @@ export SAMPLE_PATH="$PWD/sample_root/"
 export SAMPLE_NAME="t1"
 
 export SIGRUN='singularity run -B /work,/project /project/wxx6941/packages/wu_sizegap.sif'
-#alias
-#singularity run -B /work,/project ../centos7 \
+
 $SIGRUN \
 generate_samples.py --sample_name $SAMPLE_NAME --path $SAMPLE_PATH
 
