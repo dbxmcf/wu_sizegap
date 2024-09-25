@@ -26,4 +26,7 @@ sbatch stepall.sh
 ```
 sbatch common_step.sh
 ```
-
+7. To run a parallel protein comparison, submit par_tsr.sh after the second job is complete:
+```
+sbatch par_tsr.sh
+```
