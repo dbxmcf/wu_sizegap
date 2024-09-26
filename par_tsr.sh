@@ -18,7 +18,7 @@ output_folder=${output_folder%/}
 input_sample_folder=${input_sample_folder%/}
 
 $SIGRUN \
-python lf_csv2_dtype_h5.py -f "$input_sample_folder" -o "$output_folder"
+lf_csv2_dtype_h5.py -f "$input_sample_folder" -o "$output_folder"
 
 input_sample_name=${input_sample_folder##*/}
 echo "input_sample_name=$input_sample_name"
@@ -30,12 +30,12 @@ echo "input_h5=$input_h5"
 #echo "using $NPROCS processes..."
 
 module purge
-SIGPAR="singularity exec -B /work /project/wxx6941/packages/hsp-project_latest.sif intel.mpi.impiomp.out"
+SIGPAR="singularity exec -B /work,/project /project/wxx6941/packages/hsp-project_latest.sif intel.mpi.impiomp.out"
 SECONDS=0
 srun -n 8 $SIGPAR -f $input_h5
 #mpirun -np $NPROCS -f $PBS_NODEFILE -ppn 2 ./pgi.mpi.pomp.out -f $input_h5
 echo "took $SECONDS sec"
 
 $SIGRUN \
-python rebuild_mat.py -f $input_h5 -csv #-validate
+rebuild_mat.py -f $input_h5 -csv #-validate
 
