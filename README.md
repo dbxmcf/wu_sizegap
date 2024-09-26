@@ -2,9 +2,12 @@
 
 ## Instructions on how to run on the LONI cluster (New users can copy and paste each command to the terminal window and run them):
 
-1. Log onto QB3 cluster using the command:
+1. Log onto QB3 or QB4 cluster using the command:
 ```
-ssh username@qbc.loni.org
+ssh username@qbc.loni.org # QB3
+```
+```
+ssh username@qbd.loni.org # QB4
 ```
 2. Change to the /work directory:
 ```
